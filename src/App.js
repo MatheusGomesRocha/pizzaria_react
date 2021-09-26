@@ -1,12 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
 import './globals.scss';
 
+import Header from './components/Header';
 import Introduction from './components/Introduction';
 
 function App() {
   return (
     <div className="App">
+      <Header />
+
       <Introduction />
     </div>
   );

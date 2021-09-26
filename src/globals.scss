@@ -8,6 +8,9 @@
 
 :root {
     --white: #fff;
+    --black: #000;
+
+    --black-100: #111; 
 
     --gray-50: #f7f8fa;
     --gray-100: #e6e8eb;
@@ -47,6 +50,7 @@ body {
 
 body, input, textarea, button {
     color: var(--gray-500);
+    font-family: 'Inter', sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {

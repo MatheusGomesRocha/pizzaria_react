@@ -2,7 +2,7 @@ import React from "react";
 
 import PizzaImg from '../../assets/images/pizza.png';
 
-import styles from './styles.module.scss';
+import styles from './introduction.module.scss';
 
 export default function Introduction () {
     return(

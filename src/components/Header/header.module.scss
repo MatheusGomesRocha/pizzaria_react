@@ -1,0 +1,41 @@
+.header {
+    background-color: var(--black-100);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 5rem;
+    padding: 0 10%;
+    
+
+    h2 {
+        color: tomato;
+        font-size: 2rem;
+    }
+
+    nav {
+        margin-left: auto;
+
+        ul {
+            display: flex;
+            align-items: center;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+
+            li {
+                cursor: pointer;
+                margin-left: 3rem;
+                font-size: 1.5rem;
+                transition: 200ms;
+
+                &:hover {
+                    color: tomato;
+                }
+            }
+        }
+    }
+}
