@@ -4,7 +4,6 @@ import Header from './components/Header';
 import Introduction from './components/Introduction';
 import Welcome from './components/Welcome';
 import About from './components/About';
-import Team from './components/Team';
 
 function App() {
   return (
@@ -17,7 +16,6 @@ function App() {
 
       <About />
 
-      <Team />
     </div>
   );
 }

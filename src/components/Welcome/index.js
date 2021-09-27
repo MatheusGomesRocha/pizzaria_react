@@ -31,6 +31,22 @@ export default function Welcome () {
                     <span>Learn More</span>
                 </div>
             </section>
+        
+            <section className={styles.right}>
+                <div className={styles.ad}>
+                    <div className={styles.contentAd}>
+                        <span>Specialty Pizza</span>
+                        <h2>Only R$ 18.50</h2>
+                    </div>
+                </div>
+
+                <div className={styles.ad}>
+                    <div style={{bottom: 0, backgroundColor: '#F9C122'}} className={styles.contentAd}>
+                        <span>Recive a free</span>
+                        <h2>Gift Card</h2>
+                    </div>
+                </div>
+            </section>
         </div>
     )
 }
