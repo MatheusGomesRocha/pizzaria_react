@@ -2,6 +2,7 @@ import './globals.scss';
 
 import Header from './components/Header';
 import Introduction from './components/Introduction';
+import Welcome from './components/Welcome';
 import About from './components/About';
 import Team from './components/Team';
 
@@ -11,6 +12,8 @@ function App() {
       <Header />
 
       <Introduction />
+
+      <Welcome />
 
       <About />
 
