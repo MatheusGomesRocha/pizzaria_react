@@ -3,6 +3,7 @@ import './globals.scss';
 import Header from './components/Header';
 import Introduction from './components/Introduction';
 import Welcome from './components/Welcome';
+import Menu from './components/Menu';
 import About from './components/About';
 
 function App() {
@@ -13,6 +14,8 @@ function App() {
       <Introduction />
 
       <Welcome />
+
+      <Menu />
 
       <About />
 
