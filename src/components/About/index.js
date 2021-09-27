@@ -24,8 +24,7 @@ export default function About () {
                             <h2>Vitae elementum curabitur</h2>
                             <p>
                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                               Proin sed libero enim sed faucibus turpis in eu. Quis risus sed vulputate odio ut enim blandit. Duis convallis convallis tellus 
-                               id interdum velit laoreet id. Diam vulputate ut pharetra sit.
+                               Proin sed libero enim sed faucibus turpis in eu. Quis risus sed.
                             </p>
                         </div>
                     </div>
@@ -38,8 +37,7 @@ export default function About () {
                             <h2>Vitae elementum curabitur</h2>
                             <p>
                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                               Proin sed libero enim sed faucibus turpis in eu. Quis risus sed vulputate odio ut enim blandit. Duis convallis convallis tellus 
-                               id interdum velit laoreet id. Diam vulputate ut pharetra sit.
+                               Proin sed libero enim sed faucibus turpis in eu. Quis risus sed vulputate odio ut enim blandit. Duis convallis convallis tellus. 
                             </p>
                         </div>
                     </div>
@@ -67,9 +65,7 @@ export default function About () {
                         <div>
                             <h2>Vitae elementum curabitur</h2>
                             <p>
-                               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                               Proin sed libero enim sed faucibus turpis in eu. Quis risus sed vulputate odio ut enim blandit. Duis convallis convallis tellus 
-                               id interdum velit laoreet id. Diam vulputate ut pharetra sit.
+                               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                             </p>
                         </div>
                     </div>
