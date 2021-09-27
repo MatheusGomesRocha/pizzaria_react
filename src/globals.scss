@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Source+Sans+Pro:wght@300&display=swap');
 
 * {
     margin: 0;
@@ -20,6 +21,9 @@
     --gray-800: #494d4b;
 
     --brown: #322D27;
+
+    --yellow: #F9C122;
+    --red: #CA0808;
 }
 
 @media(min-width: 1500px) {
@@ -46,7 +50,7 @@ body {
 
 body, input, textarea, button {
     color: var(--gray-500);
-    font-family: 'Inter', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -56,7 +60,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
     font-size: 4rem;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 h2 {
@@ -69,4 +73,8 @@ button {
 
 li {
     font-family: 'Architects Daughter', cursive;
+}
+
+span, p {
+    font-weight: bold;
 }
