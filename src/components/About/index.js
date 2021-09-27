@@ -1,9 +1,9 @@
 import React from "react";
 
-import ChefBigImg from '../../assets/images/chef_128.png';
-import DrinkBigImg from '../../assets/images/drink_128.png';
-import FoodBigImg from '../../assets/images/food-tray_128.png';
-import RestaurantBigImg from '../../assets/images/restaurant_128.png';
+import ChefBigImg from '../../assets/images/chef.png';
+import DrinkBigImg from '../../assets/images/drink.png';
+import FoodBigImg from '../../assets/images/food-tray.png';
+import RestaurantBigImg from '../../assets/images/restaurant.png';
 
 import styles from './about.module.scss';
 
