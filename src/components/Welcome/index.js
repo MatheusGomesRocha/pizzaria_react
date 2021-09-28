@@ -1,6 +1,7 @@
 import React from "react";
 
 import PizzaSlice from '../../assets/images/pizza-slice.png';
+import PizzaAd2 from '../../assets/images/pizza-ad-2.jpg';
 
 import styles from './welcome.module.scss';
 
@@ -40,7 +41,7 @@ export default function Welcome () {
                     </div>
                 </div>
 
-                <div className={styles.ad}>
+                <div style={{backgroundImage: `url(${PizzaAd2})`}} id="ad" className={styles.ad}>
                     <div style={{bottom: 0, backgroundColor: '#F9C122'}} className={styles.contentAd}>
                         <span>Recive a free</span>
                         <h2>Gift Card</h2>
