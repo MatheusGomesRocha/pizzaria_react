@@ -1,3 +1,43 @@
 .container {
-    
+    background-image: url('../../assets/images/pizza-background-2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    section {
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 12rem 0;
+
+        .title {
+            font-family: 'Architects Daughter', cursive; 
+            color: var(--yellow);
+            font-size: 1.5rem;
+        }
+
+        h1 {
+            color: var(--white);
+            font-size: 4rem;;
+        }
+
+        .aspas {
+            color: var(--yellow);
+            font-size: 6rem;
+        }
+
+        p {
+            color: var(--white);
+            text-align: center;
+            width: 30%;
+        }
+
+        .name {
+            color: var(--yellow);
+            font-size: 1.5rem;
+            margin-top: 1rem;
+        }
+    }
 }
