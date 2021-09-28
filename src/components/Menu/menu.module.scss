@@ -1,3 +1,101 @@
 .container {
-    
+    background-image: url('../../assets/images/wood_background.jpg');
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 12rem 0;
+
+    .header {
+        span {
+            color: var(--yellow);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Architects Daughter', cursive;
+            font-size: 1.3rem;
+        }
+
+        h1 {
+            color: var(--white);
+            font-size: 4rem;
+        }
+    }
+
+    .menuArea {
+        display: flex;
+        align-items: center;
+        margin-top: 3rem;
+
+        .item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+
+            .newIndicator {
+                background-color: var(--green);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                top: 1rem;
+                left: 10rem;
+                width: 5rem;
+                height: 5rem;
+                border-radius: 2.5rem;
+
+                span {
+                    color: var(--white);
+                }
+            }
+            img {
+                width: 25rem;
+                height: 25rem;
+                object-fit: cover;
+            }
+
+            .name {
+                color: var(--yellow);
+                text-align: center;
+                width: 60%;
+                font-size: 2.5rem;
+            }
+
+            p {
+                text-align: center;
+                width: 60%;
+            }
+
+            .price {
+                color: var(--white);
+                font-size: 2rem;
+            }
+
+            .button {
+                background-color: var(--red);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                transition: 250ms;
+                width: 11rem;
+                height: 4rem;
+                border-radius: 2rem;
+                margin-top: 1rem;
+
+                &:hover {
+                    filter: brightness(0.8);
+                }
+
+                span {
+                    color: var(--white);
+                    font-size: 1.3rem;
+                }
+            }
+        }
+    }
 }
