@@ -1,3 +1,91 @@
 .container {
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 12rem 0;
+
+    .header {
+        display: flex;
+        align-items: center;
+
+        div {
+            height: 0.025rem;
+            width: 4rem;
+            background-color: var(--gray-500);
+        }
+
+        img {
+            margin: 0 1rem;
+        }
+    }
+
+    .buttons {
+        background-color: var(--gray-100);
+        display: flex;
+        align-items: center;
+        height: 3rem;
+        border-radius: 2rem;
+
+        div {
+            background-color: var(--gray-100);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: 250ms;
+            width: 8rem;
+            height: 3rem;
+            border-radius: 2rem;
+
+            &:hover {
+                filter: brightness(0.9);
+            }
+        }
+    }
+
+    .content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-top: 2rem;
+
+        .item {
+            display: flex;
+            align-items: center;
+            margin: 1.5rem;
+
+            img {
+                width: 7rem;
+                height: 7rem;
+                border-radius: 3.5rem;
+            }
+
+            .rightContent {
+                margin-left: 1rem;
+
+                .rightContentHeader {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    border-bottom: 2px dashed var(--gray-100);
+
+                    .name {
+                        color: var(--black);
+                        font-size: 1.6rem;
+                    }
+
+                    span {
+                        color: var(--red);
+                        font-size: 1.4rem;
+                    }
+                }
+
+                p {
+                    color: var(--gray-200);
+                    font-size: 1.2rem;
+                    margin-top: 1rem;
+                }
+            }
+        }
+    }
 }
