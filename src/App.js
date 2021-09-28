@@ -5,6 +5,7 @@ import Introduction from './components/Introduction';
 import Welcome from './components/Welcome';
 import Menu from './components/Menu';
 import Features from './components/Features';
+import Reviews from './components/Reviews';
 import About from './components/About';
 
 function App() {
@@ -19,6 +20,8 @@ function App() {
       <Menu />
 
       <Features />
+
+      <Reviews />
 
       <About />
 
