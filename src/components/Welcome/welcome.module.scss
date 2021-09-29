@@ -26,6 +26,12 @@
             }
         }
 
+        h1 {
+            text-align: center;
+            line-height: 3.5rem;
+            margin-top: 1rem;
+        }
+
         .textYellow {
             color: var(--yellow);
             margin-top: 2rem;
@@ -35,6 +41,7 @@
             color: var(--gray-200);
             text-align: center;
             margin-top: 1rem;
+            font-size: 1.3rem;
         }
 
         .button {
@@ -56,6 +63,8 @@
 
     .right {
         display: flex;
+        align-items: center;
+        justify-content: center;
         margin-left: 3rem;
 
         .ad {
@@ -68,7 +77,7 @@
             width: 20rem;
             height: 35rem;
             border-radius: 0.5rem;
-            margin-left: 3rem;
+            margin: 0 1.5rem;
 
             .contentAd {
                 background-color: var(--red);
@@ -92,6 +101,45 @@
                     font-size: 2.5rem;
                 }
             }
+        }
+    }
+}
+
+@media(max-width: 800px) {
+    .container {
+        .right {
+            flex-direction: column;
+            width: 100%;
+
+            .ad {
+                width: 80%;
+                height: 12rem;
+                margin-top: 2rem;
+
+                .contentAd {
+                    width: 15rem;
+                    height: 100%;
+
+
+                    h2 {
+                        font-size: 1.8rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 1200px) {
+    .container {
+        flex-direction: column;
+
+        .left {
+            width: 80%;
+        }
+
+        .right {
+            margin-top: 3rem;
         }
     }
 }
