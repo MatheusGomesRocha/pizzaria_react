@@ -12,8 +12,6 @@ export default function Header () {
                     <li>Home</li>
                     <li>Menu</li>
                     <li>Features</li>
-                    <li>News</li>
-                    <li>Reservation</li>
                     <li>Contact</li>
 
                     <li>
@@ -22,6 +20,11 @@ export default function Header () {
 
                     <li>(00) 12345-6789</li>
                     <li>0 Items - R$ 0,00</li>
+                    <li>
+                        <div className={styles.button}>
+                            <span>Book a Table</span>
+                        </div>
+                    </li>
                 </ul>
             </nav>
         </div>
