@@ -8,6 +8,7 @@ import Features from './components/Features';
 import Reviews from './components/Reviews';
 import About from './components/About';
 import Events from './components/Events';
+import Contact from './components/Contact';
 
 function App() {
   return (
@@ -27,6 +28,8 @@ function App() {
       <About />
 
       <Events />
+
+      <Contact />
     </div>
   );
 }
