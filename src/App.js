@@ -7,6 +7,7 @@ import Menu from './components/Menu';
 import Features from './components/Features';
 import Reviews from './components/Reviews';
 import About from './components/About';
+import Events from './components/Events';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
 
       <About />
 
+      <Events />
     </div>
   );
 }
