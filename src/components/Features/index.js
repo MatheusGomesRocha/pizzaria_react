@@ -55,7 +55,7 @@ export default function Features () {
                         <div className={styles.rightContent}>
                             <div className={styles.rightContentHeader}>
                                 <span className={styles.name}>{item.name}</span>
-                                <span>R$ {item.price}</span>
+                                <span className={styles.price} >R$ {item.price}</span>
                             </div>
 
                             <p>{item.ingredients} </p>

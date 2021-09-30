@@ -69,6 +69,7 @@
                     justify-content: space-between;
                     border-bottom: 2px dashed var(--gray-100);
 
+
                     .name {
                         color: var(--black);
                         font-size: 1.6rem;
@@ -86,6 +87,37 @@
                     margin-top: 1rem;
                 }
             }
+        }
+    }
+}
+
+@media(max-width: 600px) {
+    .container {
+        .buttons {
+            div {
+                width: 6rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 980px) {
+    .container {
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+
+            
+            .item {
+                
+                .rightContent {
+                    width: 100%;
+                    padding-right: 1rem;
+                }
+            }
+
         }
     }
 }
