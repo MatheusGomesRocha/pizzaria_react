@@ -58,6 +58,7 @@
             color: var(--gray-200);
             text-align: center;
             font-weight: 500;
+            font-size: 1.2rem;
             width: 75%;
             margin-top: 3rem;
         }
@@ -79,5 +80,33 @@
         width: 45rem;
         height: 35rem;
         border-radius: 1rem;
+    }
+}
+
+@media(max-width: 950px) {
+    .container {
+        flex-direction: column;
+
+        .content {
+            width: 80%;
+
+            .buttons {
+                div {
+                    width: 5rem;
+                }
+            }
+
+            p {
+                width: 100%;
+            }
+        }
+
+        .pizzaImg {
+            object-fit: cover;
+            width: 80%;
+            height: 20rem;
+            margin-top: 2rem;
+        }
+
     }
 }
