@@ -20,6 +20,7 @@
 
         h1 {
             color: var(--white);
+            text-align: center;
             font-size: 4rem;;
         }
 
@@ -31,13 +32,29 @@
         p {
             color: var(--white);
             text-align: center;
-            width: 30%;
+            width: 40%;
+            font-size: 1.2rem;
         }
 
         .name {
             color: var(--yellow);
             font-size: 1.5rem;
             margin-top: 1rem;
+        }
+    }
+}
+
+@media(max-width: 950px) {
+    .container {
+        section {
+            h1 {
+                font-size: 3rem;
+            }
+
+            p {
+                width: 70%;
+                margin-top: -3rem;
+            }
         }
     }
 }
