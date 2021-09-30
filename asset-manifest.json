@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/pizza-home/static/css/main.374c597a.chunk.css",
+    "main.js": "/pizza-home/static/js/main.edaffcce.chunk.js",
+    "main.js.map": "/pizza-home/static/js/main.edaffcce.chunk.js.map",
+    "runtime-main.js": "/pizza-home/static/js/runtime-main.d41d6bee.js",
+    "runtime-main.js.map": "/pizza-home/static/js/runtime-main.d41d6bee.js.map",
+    "static/js/2.5b4e5e5e.chunk.js": "/pizza-home/static/js/2.5b4e5e5e.chunk.js",
+    "static/js/2.5b4e5e5e.chunk.js.map": "/pizza-home/static/js/2.5b4e5e5e.chunk.js.map",
+    "static/js/3.f563b780.chunk.js": "/pizza-home/static/js/3.f563b780.chunk.js",
+    "static/js/3.f563b780.chunk.js.map": "/pizza-home/static/js/3.f563b780.chunk.js.map",
+    "index.html": "/pizza-home/index.html",
+    "static/css/main.374c597a.chunk.css.map": "/pizza-home/static/css/main.374c597a.chunk.css.map",
+    "static/js/2.5b4e5e5e.chunk.js.LICENSE.txt": "/pizza-home/static/js/2.5b4e5e5e.chunk.js.LICENSE.txt",
+    "static/media/lasanha.32faf48d.jpg": "/pizza-home/static/media/lasanha.32faf48d.jpg",
+    "static/media/welcome.module.scss": "/pizza-home/static/media/pizza-ad-1.97ed9d78.jpg",
+    "static/media/pizza-ad-2.699d7c07.jpg": "/pizza-home/static/media/pizza-ad-2.699d7c07.jpg",
+    "static/media/reviews.module.scss": "/pizza-home/static/media/pizza-background-2.583354e4.jpg",
+    "static/media/introduction.module.scss": "/pizza-home/static/media/pizza-background.583354e4.jpg",
+    "static/media/pizza-demo-1.f07c04cf.png": "/pizza-home/static/media/pizza-demo-1.f07c04cf.png",
+    "static/media/pizza-demo-2.5d947912.png": "/pizza-home/static/media/pizza-demo-2.5d947912.png",
+    "static/media/pizza-demo-3.856de203.png": "/pizza-home/static/media/pizza-demo-3.856de203.png",
+    "static/media/pizza-logo.1ffa89e7.png": "/pizza-home/static/media/pizza-logo.1ffa89e7.png",
+    "static/media/ravioli.4651479f.jpg": "/pizza-home/static/media/ravioli.4651479f.jpg",
+    "static/media/footer.module.scss": "/pizza-home/static/media/wood_background.43b76b67.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d41d6bee.js",
+    "static/js/2.5b4e5e5e.chunk.js",
+    "static/css/main.374c597a.chunk.css",
+    "static/js/main.edaffcce.chunk.js"
+  ]
+}
