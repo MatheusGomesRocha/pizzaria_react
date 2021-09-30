@@ -3,14 +3,15 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
     position: fixed;
     top: 0;
-    z-index: 1;
-    width: 100%;
+    z-index: 999;
+    width: calc(100% - 15.5rem);
     height: 5rem;
     
     nav {
+        padding-left: 2rem;
+        
         ul {
             display: flex;
             align-items: center;
@@ -70,75 +71,6 @@
             }
         }
     }
-
-    .cartAreaOpen {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        animation-name: showCart;
-        padding: 0 2rem;
-    }
-
-    .cartAreaClose {
-        animation-name: hideCart;
-    }
-
-    section {
-        background-color: var(--white);
-        animation-duration: 500ms;
-        animation-fill-mode: forwards;
-        position: absolute;
-        right: 0;
-        height: 195vh;
-
-        .cartItem {
-            display: flex;
-            margin-top: 6rem;
-
-            img {
-                width: 8rem;
-                height: 8rem;
-            }
-
-            .content {
-                margin-left: 1rem;
-                width: 100%;
-
-                .contentHeader {
-                    display: flex;
-                    align-items: center;
-                    width: 100%;
-                    margin-top: 1rem;
-
-                    span {
-                        color: var(--red);
-                        font-size: 1.5rem;
-                        margin-left: auto;
-                    }
-                }
-
-                .contentFooter {
-                    display: flex;
-                    align-items: center;
-                    margin-top: 0.5rem;
-
-                    span {
-                        color: var(--black);
-                        cursor: pointer;
-                        font-size: 2rem;
-                    }
-
-                    .quantity {
-                        color: var(--red);
-                        cursor: auto;
-                        text-align: center;
-                        margin: 0 1rem;
-                        width: 2rem;
-                    }
-                }
-            }
-        }
-    }
 }
 
 @media(max-width: 1100px) {
@@ -147,20 +79,8 @@
     }
 }
 
-@keyframes showCart {
-    0% {
-        width: 0;
-    }
-    100% {
-        width: 30rem;
-    }
-}
-
-@keyframes hideCart {
-    0% {
-        width: 30rem;
-    }
-    100% {
-        width: 0;
+@media (min-width: 1101px) and (max-width: 1800px) {
+    .header {
+        width: 100%;
     }
 }

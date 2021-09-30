@@ -78,5 +78,15 @@ span, p {
     font-weight: bold;
 }
 
+.app {
+    display: flex;
+
+    main {
+        flex: 1;
+        overflow-y: scroll;
+        height: 100vh;
+    }
+}
+
 // Italic title Texts
 // font-family: 'Architects Daughter', cursive; 

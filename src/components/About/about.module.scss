@@ -110,3 +110,15 @@
 
     }
 }
+
+@media (min-width: 1501px) and (max-width: 1700px) {
+    .container {
+        .content {
+            .buttons {
+                div {
+                    width: 5rem;
+                }
+            }
+        }
+    }
+}

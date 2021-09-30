@@ -29,13 +29,14 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            width: 30rem;
+            width: 25rem;
             height: 45rem;
-            margin-left: 5rem;
+            margin-left: 1rem;
             border-radius: 1rem;
 
             img {
-                width: 30rem;
+                object-fit: cover;
+                width: 20rem;
                 height: 20rem;
                 border-top-left-radius: 1rem;
                 border-top-right-radius: 1rem;
@@ -66,7 +67,7 @@
                 cursor: pointer;
                 transition: 250ms;
                 font-size: 1.5rem;
-                margin-top: 5rem;
+                margin: auto 0 1rem 0;
 
                 &:hover {
                     filter: brightness(0.7);

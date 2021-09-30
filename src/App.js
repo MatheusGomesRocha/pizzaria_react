@@ -1,6 +1,7 @@
 import './globals.scss';
 
 import Header from './components/Header';
+import Cart from './components/Cart';
 import Introduction from './components/Introduction';
 import Welcome from './components/Welcome';
 import Menu from './components/Menu';
@@ -13,26 +14,30 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="App">
-      <Header />
+    <div className="app">
+      <main>
+        <Header />
 
-      <Introduction />
+        <Introduction />
 
-      <Welcome />
+        <Welcome />
 
-      <Menu />
+        <Menu />
 
-      <Features />
+        <Features />
 
-      <Reviews />
+        <Reviews />
 
-      <About />
+        <About />
 
-      <Events />
+        <Events />
 
-      <Contact />
+        <Contact />
 
-      <Footer />
+        <Footer />
+      </main>
+
+      <Cart />
     </div>
   );
 }
