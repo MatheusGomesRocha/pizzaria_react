@@ -75,7 +75,7 @@
         }
     }
 }
-
+ 
 @media (max-width: 1050px) {
     .container {
         h1 {
@@ -91,17 +91,24 @@
             .item {
                 margin-left: 0;
                 width: 100%;
-                height: 40rem;
+                height: 35rem;
                 margin-top: 2rem;
+                padding-bottom: 2rem;
 
                 img {
-                    width: 100%;
                     object-fit: cover;
+                    height: 15rem;
+                    width: 100%;
                 }
 
                 .date {
-                    margin-top: 2rem;
+                    margin-top: 1rem;
                 }
+
+                .readMore {
+                    margin-top: auto;
+                }
+
             }
         }
     }

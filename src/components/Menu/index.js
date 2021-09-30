@@ -1,6 +1,5 @@
 import React from "react";
 
-import PizzaDemo1 from '../../assets/images/pizza-demo-1.png';
 import PizzaDemo2 from '../../assets/images/pizza-demo-2.png';
 import PizzaDemo3 from '../../assets/images/pizza-demo-3.png';
 
@@ -20,7 +19,7 @@ export default function Menu () {
                         <span>New</span>
                     </div>
                     
-                    <img src={PizzaDemo1} />
+                    <img src={PizzaDemo3} />
                     <span className={styles.name}>Pepperoni</span>
                     <p>Tomato, salami, cheese, pepper, chilli, sauce, mozzarella cheese and onion</p>
                     <h2 className={styles.price}>R$ 18.50</h2>
