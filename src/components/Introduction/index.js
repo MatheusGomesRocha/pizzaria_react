@@ -14,6 +14,10 @@ export default function Introduction () {
                     <span>Order online now</span>
                 </div>
             </div>
+
+            <div className={styles.bounce}>
+                <span>↓</span>
+            </div>
         </div>
     )
 }
