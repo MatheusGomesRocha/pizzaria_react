@@ -10,31 +10,40 @@ import styles from './contact.module.scss';
 export default function Contact () {
     return(
         <div className={styles.container}>
-            <img src={PizzaImg1} />
-            <img style={{marginLeft: '3rem'}} src={PizzaImg1} />
+            <div className={styles.imgArea}>
+                <img src={PizzaImg1} />
+                <img src={PizzaImg1} />
+            </div>
 
             <section>
-                <h2>get in touch</h2>
-                <h1>Contact Info</h1>
+                <div className={styles.sectionHeader}>
+                    <h2>get in touch</h2>
+                    <h1>Contact Info</h1>
 
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-
-                <div>
-                    <img src={PinIcon} />
-                    <span>Av. Bezzerra de Menezes 515, Fortaleza, CE</span>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </p>
                 </div>
 
-                <div>
-                    <img src={ClockIcon} />
-                    <span>Monday - Friday: 12am - 12pm</span>
-                    <span>Saturday: 18pm - 12pm</span>
-                </div>
 
-                <div>
-                    <img src={PhoneIcon} />
-                    <span>(00) 12345-6789</span>
+                <div className={styles.sectionInfo}>
+                    <div>
+                        <img src={PinIcon} />
+                        <span>Av. Bezzerra de Menezes 515, Fortaleza, CE</span>
+                    </div>
+
+                    <div style={{marginTop: 0}}>
+                        <img src={ClockIcon} />
+                        <div style={{display: 'flex', flexDirection: 'column', alignItems: 'flex-start'}}>
+                            <span>Monday - Friday: 12am - 12pm</span>
+                            <span>Saturday: 18pm - 12pm</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <img src={PhoneIcon} />
+                        <span>(00) 12345-6789</span>
+                    </div>
                 </div>
             </section>
         </div>
