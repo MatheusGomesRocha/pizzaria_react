@@ -16,6 +16,32 @@
         height: 90vh;
         border-radius: 1rem;
 
+        .closeModal {
+            background-color: var(--black-100);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 999999;
+            cursor: pointer;
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            transition: 250ms;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 1rem;
+
+            &:hover {
+                filter: brightness(0.5);
+            }
+            
+            span {
+                color: var(--white);
+                font-family: 'Architects Daughter', cursive;
+                font-size: 1.2rem;
+            }
+        }
+
         section {
             background-color: var(--red);
             position: absolute;

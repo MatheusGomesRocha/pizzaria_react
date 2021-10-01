@@ -1,13 +1,17 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 
 import GoogleIcon from '../../assets/images/google.png';
 import AppleIcon from '../../assets/images/apple.png';
 import FacebookIcon from '../../assets/images/facebook.png';
 
+import { ModalContext } from '../../contexts/ModalContext';
+
 import styles from './modal.module.scss';
 
 export default function Modal () {
     const [whatForm, setWhatForm] = useState('login');
+
+    const { closeModal } = useContext(ModalContext);
 
     const DefaultForm = (props) => {
         return(
@@ -63,6 +67,10 @@ export default function Modal () {
     return(
         <div className={styles.container}>
             <div className={styles.modal}>
+                <div onClick={closeModal} className={styles.closeModal}>
+                    <span>X</span>
+                </div>
+                
                 <section className={whatForm === 'login' ? styles.dividerShowSignUp : styles.dividerShowLogin} />
 
                 <div>

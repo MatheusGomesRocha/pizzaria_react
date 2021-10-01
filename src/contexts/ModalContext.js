@@ -9,10 +9,15 @@ export function ModalContextProvider({ children }) {
         setIsOpen(true);
     }
 
+    function closeModal () {
+        setIsOpen(false);
+    }
+
     return (
         <ModalContext.Provider value={{ 
             isOpen,
-            openModal
+            openModal,
+            closeModal
         }}>
             {children}
         </ModalContext.Provider>
