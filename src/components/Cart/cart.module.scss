@@ -4,13 +4,33 @@
     width: 28.5rem;
     height: 100vh;
 
+    .cartHeader {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 2rem;
+        margin: 2rem 0;
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        span {
+            color: var(--red);
+            font-family: 'Architects Daughter', cursive;
+            font-size: 1.4rem;
+        }
+    }
+
     .cartItem {
         display: flex;
-        margin-top: 6rem;
+        align-items: center;
+        margin-top: 2rem;
+        padding: 0 1rem;
 
         img {
-            width: 8rem;
-            height: 8rem;
+            width: 6rem;
+            height: 6rem;
         }
 
         .content {
@@ -20,25 +40,24 @@
             .contentHeader {
                 display: flex;
                 align-items: center;
+                justify-content: space-between;
                 width: 100%;
-                margin-top: 1rem;
 
                 span {
                     color: var(--red);
                     font-size: 1.5rem;
-                    margin-left: auto;
                 }
             }
 
             .contentFooter {
                 display: flex;
                 align-items: center;
-                margin-top: 0.5rem;
+                margin-top: 0.3rem;
 
                 span {
                     color: var(--black);
                     cursor: pointer;
-                    font-size: 2rem;
+                    font-size: 1.5rem;
                 }
 
                 .quantity {

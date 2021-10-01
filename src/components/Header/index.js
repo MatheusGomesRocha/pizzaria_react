@@ -29,7 +29,7 @@ export default function Header () {
                         </div>
                     </li> */}
 
-                    <li onClick={openModal}>Entrar / Cadastre-se</li>
+                    <li onClick={openModal}>Login / Sign Up</li>
                 </ul>
             </nav>
         </div>

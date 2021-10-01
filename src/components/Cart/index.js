@@ -26,6 +26,28 @@ export default function Cart () {
 
     return(
         <section className={styles.cart}>
+            <div className={styles.cartHeader}>
+                <h1>Cart</h1>
+                <span>{quantity} items</span>
+            </div>
+
+            <div className={styles.cartItem}>
+                <img src={PizzaDemo2} />
+
+                <div className={styles.content}>
+                    <div className={styles.contentHeader}>
+                        <h2>Pepperonni</h2>
+                        <span>R$ {parseFloat(quantity * price)}</span>
+                    </div>
+
+                    <div className={styles.contentFooter}>
+                        <span onClick={decrease}>-</span>
+                        <span className={styles.quantity}>{quantity}</span>
+                        <span onClick={increase}>+</span>
+                    </div>
+                </div>
+            </div>
+
             <div className={styles.cartItem}>
                 <img src={PizzaDemo2} />
 
