@@ -1,3 +1,5 @@
+import React, { useContext } from 'react';
+
 import './globals.scss';
 
 import Header from './components/Header';
@@ -12,33 +14,46 @@ import Events from './components/Events';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
+import { ModalContext } from './contexts/ModalContext';
+import Modal from './components/Modal';
+
 function App() {
+  const { isOpen } = useContext(ModalContext);
+
   return (
-    <div className="app">
-      <main>
-        <Header />
+        <div className="app">
+          <main>
+            <Header />
 
-        <Introduction />
+            <Introduction />
 
-        <Welcome />
+            <Welcome />
 
-        <Menu />
+            <Menu />
 
-        <Features />
+            <Features />
 
-        <Reviews />
+            <Reviews />
 
-        <About />
+            <About />
 
-        <Events />
+            <Events />
 
-        <Contact />
+            <Contact />
 
-        <Footer />
-      </main>
+            <Footer />
 
-      <Cart />
-    </div>
+            {isOpen ?
+              <Modal />
+              :
+              undefined
+            }
+          </main>
+
+        {/* <Cart /> */}
+        
+      
+      </div>
   );
 }
 
