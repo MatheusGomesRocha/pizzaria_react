@@ -9,8 +9,8 @@ import styles from './menu.module.scss';
 
 let array = [
     {id: 1, img: PizzaDemo3, name: 'Pepperoni', description: 'Tomato, salami, cheese, pepper, chilli, sauce, mozzarella cheese and onion', price: '18.50', new: true},
-    {id: 2, img: PizzaDemo2, name: 'Pepperoni', description: 'Tomato, salami, cheese, pepper, chilli, sauce, mozzarella cheese and onion', price: '18.50'},
-    {id: 3, img: PizzaDemo3, name: 'Pepperoni', description: 'Tomato, salami, cheese, pepper, chilli, sauce, mozzarella cheese and onion', price: '18.50'},
+    {id: 2, img: PizzaDemo2, name: 'Mozzarela', description: 'Salami, cheese, pepper', price: '25.99'},
+    {id: 3, img: PizzaDemo3, name: 'Vegan', description: 'lettuce, carrot, onion, tomato', price: '23.75'},
 ];
 
 export default function Menu () {

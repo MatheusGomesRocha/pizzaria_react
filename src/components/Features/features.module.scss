@@ -95,7 +95,7 @@
     .container {
         .buttons {
             div {
-                width: 6rem;
+                width: 5.5rem;
             }
         }
     }
@@ -103,18 +103,27 @@
 
 @media (max-width: 980px) {
     .container {
-
         .content {
             display: flex;
             flex-direction: column;
             width: 100%;
-
             
             .item {
-                
                 .rightContent {
                     width: 100%;
-                    padding-right: 1rem;
+
+                    .rightContentHeader {
+                        .name {
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            font-size: 1.4rem;
+                            width: 50%;
+                        }
+
+                        span {
+                            font-size: 1.2rem;
+                        }
+                    }
                 }
             }
 
