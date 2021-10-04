@@ -118,8 +118,25 @@
                 }
 
                 span {
-                    margin: 0 1rem;
+                    color: var(--red);
                     text-align: center;
+                    font-size: 1.2rem;
+                    margin: 0 1rem;
+                }
+            }
+
+            .errorMsg {
+                background-color: var(--red);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 3rem;
+                border-radius: 0.5rem;
+                padding: 0 1rem;
+                z-index: 999;
+
+                span {
+                    color: var(--white);
                 }
             }
 
@@ -170,7 +187,7 @@
                 }
             }
 
-            span {
+            .changeForm {
                 color: var(--red);
                 cursor: pointer;
                 transition: 250ms;
