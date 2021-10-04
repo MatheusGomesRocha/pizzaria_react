@@ -4,6 +4,7 @@ import PizzaDemo2 from '../../assets/images/pizza-demo-2.png';
 import PizzaDemo3 from '../../assets/images/pizza-demo-3.png';
 
 import { ModalContext } from '../../contexts/ModalContext';
+import { api } from '../../services/api';
 
 import styles from './menu.module.scss';
 
@@ -15,6 +16,15 @@ let array = [
 
 export default function Menu () {
     const { email, openModal } = useContext(ModalContext);
+
+    function addToCart (name, price) {
+        api.post('add-to-cart', {
+            productName: name,
+            productPrice: price,
+            userEmail: email,
+        }).then((res) => console.log(res.data.result))
+        .catch((err) => console.log(err));
+    }
 
     return(
         <div className={styles.container}>
@@ -37,7 +47,7 @@ export default function Menu () {
                         <span className={styles.name}>{item.name}</span>
                         <p>{item.description}</p>
                         <h2 className={styles.price}>R$ {item.price}</h2>
-                        <div onClick={email ? undefined : openModal} className={styles.button}>
+                        <div onClick={email ? () => addToCart(item.name, item.price) : openModal} className={styles.button}>
                             <span>Add to cart</span>
                         </div>
                     </div>
