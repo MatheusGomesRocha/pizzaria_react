@@ -15,14 +15,17 @@ let array = [
 ];
 
 export default function Menu () {
-    const { email, openModal } = useContext(ModalContext);
+    const { email, openModal, setRequest } = useContext(ModalContext);
 
     function addToCart (name, price) {
         api.post('add-to-cart', {
             productName: name,
             productPrice: price,
             userEmail: email,
-        }).then((res) => console.log(res.data.result))
+        }).then((res) => {
+            console.log(res.data.result);
+            setRequest();
+        })
         .catch((err) => console.log(err));
     }
 

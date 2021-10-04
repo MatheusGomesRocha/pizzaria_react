@@ -18,7 +18,7 @@ import { ModalContext } from './contexts/ModalContext';
 import Modal from './components/Modal';
 
 function App() {
-  const { isOpen } = useContext(ModalContext);
+  const { email, isOpen } = useContext(ModalContext);
 
   return (
         <div className="app">
@@ -43,14 +43,10 @@ function App() {
 
             <Footer />
 
-            {isOpen ?
-              <Modal />
-              :
-              undefined
-            }
+            {isOpen ? <Modal /> : undefined}
           </main>
 
-        <Cart />
+        {email ? <Cart /> : undefined}
         
       
       </div>

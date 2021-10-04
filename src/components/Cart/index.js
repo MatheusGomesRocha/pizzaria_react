@@ -1,69 +1,86 @@
-import React, { useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 
 import PizzaDemo2 from '../../assets/images/pizza-demo-2.png';
+
+import { api } from '../../services/api';
+import { ModalContext } from '../../contexts/ModalContext';
 
 import styles from './cart.module.scss';
 
 export default function Cart () {
-    const [quantity, setQuantity] = useState(1);
-    const [price, setPrice] = useState(35.50);
+    const [quantity, setQuantity] = useState(0);
+    const [price, setPrice] = useState(0);
+    const [cartArray, setCartArray] = useState([]);
 
-    function decrease () {
-        if(quantity > 1) {
-            setQuantity(quantity - 1);
-        }  else {
-            setQuantity(quantity);
+    const { setRequest, newRequest, email } = useContext(ModalContext);
+
+    useEffect(() => {
+        api.get(`cart-quantity`)
+        .then((res) => setQuantity(res.data.result));
+
+        api.get(`cart-price`)
+        .then((res) => console.log(res.data.getCartPrice));
+
+        api.get(`cart/${email}`)
+        .then((res) => {
+            // console.log(res.data.cart);
+            setCartArray(res.data.cart);
+        });
+    }, [newRequest]);
+
+    function decrease (productQuantity, name) {
+        if(productQuantity <= 1) {
+            return;
+        } else {
+            api.post('/decrement-product', {
+                productName: name,
+                userEmail: email
+            }).then((res) => {
+                console.log(res.data);
+            });
+    
+            setRequest(true);
         }
     }
 
-    function increase () {
-        if(quantity >= 1) {
-            setQuantity(quantity + 1);
-        }  else {
-            setQuantity(quantity);
-        }
+    function increase (name) {
+        api.post('/increment-product', {
+            productName: name,
+            userEmail: email
+        }).then((res) => {
+            console.log(res.data);
+        });
+
+        setRequest(true);
     }
 
     return(
         <section className={styles.cart}>
             <div className={styles.cartHeader}>
                 <h1>Cart</h1>
-                <span>{quantity} items</span>
+                <span>{quantity} items (total)</span>
             </div>
 
-            <div className={styles.cartItem}>
-                <img src={PizzaDemo2} />
+            {cartArray.map((item, k) => (
+                <div key={k} className={styles.cartItem}>
+                    <img src={PizzaDemo2} />
 
-                <div className={styles.content}>
-                    <div className={styles.contentHeader}>
-                        <h2>Pepperonni</h2>
-                        <span>R$ {parseFloat(quantity * price)}</span>
-                    </div>
+                    <div className={styles.content}>
+                        <div className={styles.contentHeader}>
+                            <h2>{item.productName}</h2>
+                            <span>R$ {parseFloat(item.productQuantity * item.productPrice).toFixed(2)}</span>
+                        </div>
 
-                    <div className={styles.contentFooter}>
-                        <span onClick={decrease}>-</span>
-                        <span className={styles.quantity}>{quantity}</span>
-                        <span onClick={increase}>+</span>
+                        <div className={styles.contentFooter}>
+                            <span onClick={() => decrease(item.productQuantity, item.productName)}>-</span>
+                            <span className={styles.quantity}>{item.productQuantity}</span>
+                            <span onClick={() => increase(item.productName)}>+</span>
+                        </div>
+
                     </div>
                 </div>
-            </div>
+            ))}
 
-            <div className={styles.cartItem}>
-                <img src={PizzaDemo2} />
-
-                <div className={styles.content}>
-                    <div className={styles.contentHeader}>
-                        <h2>Pepperonni</h2>
-                        <span>R$ {parseFloat(quantity * price)}</span>
-                    </div>
-
-                    <div className={styles.contentFooter}>
-                        <span onClick={decrease}>-</span>
-                        <span className={styles.quantity}>{quantity}</span>
-                        <span onClick={increase}>+</span>
-                    </div>
-                </div>
-            </div>
         </section>
     )
 }

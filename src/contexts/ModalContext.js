@@ -5,6 +5,7 @@ export const ModalContext = createContext({});
 export function ModalContextProvider({ children }) {
     const [isOpen, setIsOpen] = useState(false);
     const [email, setEmail] = useState(localStorage.getItem('userEmail'));
+    const [newRequest, setNewRequest] = useState(false);
 
     function openModal () {
         setIsOpen(true);
@@ -24,6 +25,14 @@ export function ModalContextProvider({ children }) {
         setEmail('');
     }
 
+    function setRequest() {
+        setNewRequest(true);
+
+        setTimeout(() => {
+            setNewRequest(false);
+        }, 100)
+    }
+
     return (
         <ModalContext.Provider value={{ 
             isOpen,
@@ -31,7 +40,9 @@ export function ModalContextProvider({ children }) {
             closeModal,
             email,
             setUserEmail,
-            logout
+            logout,
+            newRequest,
+            setRequest
         }}>
             {children}
         </ModalContext.Provider>
