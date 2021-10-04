@@ -6,7 +6,7 @@ import PizzaLogo from '../../assets/images/pizza-logo.png';
 import styles from './header.module.scss';
 
 export default function Header () {
-    const { openModal } = useContext(ModalContext);
+    const { email, logout, openModal } = useContext(ModalContext);
 
     return(
         <div className={styles.header}>
@@ -29,7 +29,11 @@ export default function Header () {
                         </div>
                     </li> */}
 
-                    <li onClick={openModal}>Login / Sign Up</li>
+                    {email ?
+                        <li onClick={logout}>{email}</li>
+                    : 
+                        <li onClick={openModal}>Login / Sign Up</li>
+                    }
                 </ul>
             </nav>
         </div>

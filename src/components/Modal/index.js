@@ -20,8 +20,9 @@ export default function Modal () {
     const [passwordLogin, setPasswordLogin] = useState('');
 
     const [errorMsg, setErrorMsg] = useState('');
+    const [loginErrorMsg, setLoginErrorMsg] = useState('');
 
-    const { closeModal } = useContext(ModalContext);
+    const { setUserEmail, closeModal } = useContext(ModalContext);
 
     function signUp (e) {
         if(!email || !password || !confirmPassword) {
@@ -45,6 +46,26 @@ export default function Modal () {
                 } else {
                     setErrorMsg(res.data.error);
                     return;
+                }
+            }).catch((err) => console.log(err));
+        }
+    }
+
+    function login (e) {
+        e.preventDefault();
+        if(!emailLogin || !passwordLogin) {
+            setLoginErrorMsg('All fields are required');
+        } else {
+            api.post('login', {
+                email: emailLogin,
+                password: passwordLogin
+            }).then((res) => {
+                if(res.data.hasUser) {
+                    console.log(res.data.hasUser);
+                    setUserEmail(res.data.hasUser.email);
+                    closeModal();
+                } else {
+                    setLoginErrorMsg(res.data.error);
                 }
             }).catch((err) => console.log(err));
         }
@@ -114,7 +135,7 @@ export default function Modal () {
                 {/* ------------------------ */}
 
                 <div>
-                    <form method='post' onSubmit={undefined} style={{right: 0}} className={styles.defaultForm}>
+                    <form method='post' onSubmit={login} style={{right: 0}} className={styles.defaultForm}>
                         <h1>Sign in to Pizza Home</h1>
 
                         <div className={styles.otherAuth}>
@@ -136,6 +157,12 @@ export default function Modal () {
                             <span>Or do it via E-mail</span>
                             <div />
                         </div>
+
+                        {loginErrorMsg ?
+                            <div className={styles.errorMsg}>
+                                <span>Error: {loginErrorMsg}</span>
+                            </div>
+                        : undefined}
 
                         <div className={styles.inputArea}>
                             <label>E-mail</label>
