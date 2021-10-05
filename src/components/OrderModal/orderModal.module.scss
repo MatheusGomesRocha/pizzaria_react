@@ -15,6 +15,7 @@
         animation-fill-mode: forwards;
         animation-duration: 500ms;
         position: relative;
+        overflow: hidden;
         width: 60%;
         height: 90vh;
         border-radius: 1rem;
@@ -44,6 +45,219 @@
                 font-size: 1.2rem;
             }
         }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 90%;
+            margin: 4rem 5% 1rem 5%;
+
+            .progress {
+                background-color: var(--gray-100);
+                width: 30%;
+                height: 1rem;
+                border-radius: 0.5rem;
+
+                .progressFilled {
+                    background-color: var(--red);
+                    animation-name: progressFilled;
+                    animation-fill-mode: forwards;
+                    animation-duration: 500ms;
+                    height: 1rem;
+                    border-radius: 0.5rem;
+                }
+            }
+
+            .ball {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                height: 4rem;
+                width: 4rem;
+                border-radius: 2rem;
+                background-color: var(--gray-100);
+
+                .ballFilled {
+                    background-color: var(--red);
+                    position: absolute;
+                    animation-name: ballFilled;
+                    animation-fill-mode: forwards;
+                    animation-delay: 500ms;
+                    animation-duration: 500ms;
+                    border-radius: 2rem;
+                }
+
+                span {
+                    color: var(--gray-200);
+                    z-index: 999;
+                    font-size: 1.5rem;
+                }
+            }
+        }
+
+        .content {
+            height: 70%;
+
+            table {
+                border-collapse: collapse;
+                animation-name: showContent;
+                animation-delay: 500ms;
+                animation-duration: 500ms;
+                animation-fill-mode: forwards;
+                opacity: 0;
+                width: 90%;
+                margin: 2rem 5% 4rem 5%;
+    
+                th {
+                    background-color: #eee;
+                    padding: 1rem;
+                }
+                
+                td, th {
+                    text-align: left;
+                }
+        
+                td {
+                    color: var(--black);
+                    font-size: 1.3rem;
+                    padding: 0 1rem;
+        
+                    img {
+                        object-fit: contain;
+                        width: 6rem;
+                        height: 6rem;
+                    }
+                }
+            }
+    
+            form {
+                animation-name: showContent;
+                animation-delay: 1s;
+                animation-duration: 500ms;
+                animation-fill-mode: forwards;
+                opacity: 0;
+                width: 90%;
+                margin: 0 5%;
+
+                h1 {
+                    margin-bottom: 2rem;
+                }
+    
+                .inputArea {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    margin-top: 1.5rem;
+    
+                    label {
+                        color: var(--black);
+                        font-size: 1.3rem;
+                    }
+    
+                    input {
+                        color: var(--black);
+                        outline: 0;
+                        transition: 500ms;
+                        font-size: 1rem;
+                        width: 100%;
+                        height: 3rem;
+                        padding-left: 1rem;
+                        border-radius: 0.5rem;
+                        border: 1px solid var(--gray-200);
+    
+                        &::placeholder {
+                            color: var(--gray-200);
+                        }
+    
+                        &:focus {
+                            border-color: var(--black-100);
+                        }
+                    }
+                }
+    
+                .rowInput {
+                    display: flex;
+                    width: calc(100% + 1rem);
+                    
+                    .inputArea {
+                        margin-right: 1rem;
+    
+                        .disabled {
+                            background-color: var(--gray-100);
+                            cursor: not-allowed;
+    
+                            &::placeholder {
+                                color: var(--gray-500);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            width: 90%;
+            margin: 0 5%;
+
+            .left {
+                display: flex;
+                flex-direction: column;
+
+                span {
+                    font-size: 1.3rem;
+                }
+
+                .text {
+                    color: var(--red);
+                }
+
+                .backButton {
+                    background-color: var(--black);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                    transition: 250ms;
+                    height: 3.5rem;
+                    width: 10rem;
+                    border-radius: 0.5rem;
+
+                    &:hover {
+                        filter: brightness(0.7);
+                    }
+
+                    span {
+                        color: var(--white);
+                        font-size: 1.3rem;
+                    }
+                }
+            }
+
+            .continueButton {
+                background-color: var(--red);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                transition: 250ms;
+                height: 3.5rem;
+                width: 10rem;
+                border-radius: 0.5rem;
+
+                &:hover {
+                    filter: brightness(0.9);
+                }
+
+                span {
+                    color: var(--white);
+                    font-size: 1.3rem;
+                }
+            }
+        }
     }
 }
 
@@ -54,6 +268,35 @@
     }
     100% {
         transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes progressFilled {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes ballFilled {
+    0% {
+        width: 0;
+        height: 0;
+    }
+    100% {
+        width: 4rem;
+        height: 4rem;
+    }
+}
+
+@keyframes showContent {
+    0% {
+        opacity: 0;
+    }
+    100% {
         opacity: 1;
     }
 }
