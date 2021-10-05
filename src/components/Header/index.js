@@ -9,7 +9,7 @@ export default function Header () {
     const { email, logout, openModal } = useContext(ModalContext);
 
     return(
-        <div style={{width: email ? 'calc(100% - 28.5rem)' : '100%'}} className={styles.header}>
+        <div className={styles.header}>
             <nav>
                 <ul>
                     <li>Home</li>

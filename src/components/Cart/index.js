@@ -15,11 +15,13 @@ export default function Cart () {
     const { setRequest, newRequest, email } = useContext(ModalContext);
 
     useEffect(() => {
-        api.get(`cart-quantity`)
+        api.get(`cart-quantity/${email}`)
         .then((res) => setQuantity(res.data.result));
 
-        api.get(`cart-price`)
-        .then((res) => console.log(res.data.getCartPrice));
+        api.get(`cart-price/${email}`)
+        .then((res) => {
+            setPrice(res.data.subtotal)
+        });
 
         api.get(`cart/${email}`)
         .then((res) => {
@@ -81,6 +83,13 @@ export default function Cart () {
                 </div>
             ))}
 
+            <div className={styles.cartFooter}>
+                <h2>R$ {price}</h2>
+
+                <div className={styles.button}>
+                    <span>Finish order</span>
+                </div>
+            </div>
         </section>
     )
 }

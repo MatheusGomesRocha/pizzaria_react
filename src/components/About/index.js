@@ -50,7 +50,7 @@ export default function About () {
                 <span className={styles.readMore}>Read More</span>
             </div>
 
-            <img className={styles.pizzaImg} src={PizzaStory1995} />
+            <img alt="pizza-story" className={styles.pizzaImg} src={PizzaStory1995} />
         </div>
     )
 }
