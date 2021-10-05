@@ -4,6 +4,7 @@ export const ModalContext = createContext({});
 
 export function ModalContextProvider({ children }) {
     const [isOpen, setIsOpen] = useState(false);
+    const [isOpenOrderModal, setIsOpenOrderModal] = useState(false);
     const [email, setEmail] = useState(localStorage.getItem('userEmail'));
     const [newRequest, setNewRequest] = useState(false);
 
@@ -13,6 +14,14 @@ export function ModalContextProvider({ children }) {
 
     function closeModal () {
         setIsOpen(false);
+    }
+
+    function openOrderModal () {
+        setIsOpenOrderModal(true);
+    }
+
+    function closeOrderModal () {
+        setIsOpenOrderModal(false);
     }
 
     function setUserEmail (v) {
@@ -42,7 +51,10 @@ export function ModalContextProvider({ children }) {
             setUserEmail,
             logout,
             newRequest,
-            setRequest
+            setRequest,
+            isOpenOrderModal,
+            openOrderModal,
+            closeOrderModal
         }}>
             {children}
         </ModalContext.Provider>

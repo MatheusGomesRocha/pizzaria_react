@@ -30,7 +30,7 @@ export default function Menu () {
     }
 
     return(
-        <div className={styles.container}>
+        <div id="menu" className={styles.container}>
             <section className={styles.header}>
                 <span>Order online Now</span>
                 <h1>Our Delicious Pizzas</h1>

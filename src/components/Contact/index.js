@@ -9,7 +9,7 @@ import styles from './contact.module.scss';
 
 export default function Contact () {
     return(
-        <div className={styles.container}>
+        <div id="contact" className={styles.container}>
             <div className={styles.imgArea}>
                 <img src={PizzaImg1} />
                 <img src={PizzaImg1} />

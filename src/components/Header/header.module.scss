@@ -25,6 +25,15 @@
                 font-size: 1.3rem;
                 transition: 200ms;
 
+                a {
+                    text-decoration: none;
+                    color: var(--gray-500);
+
+                    &:hover {
+                        color: var(--yellow);
+                    }
+                }
+
                 &.cart {
                     background-color: var(--white);
                     display: flex;
@@ -41,7 +50,7 @@
                 }
 
                 &:hover {
-                    color: var((--yellow));
+                    color: var(--yellow);
                 }
 
                 img {

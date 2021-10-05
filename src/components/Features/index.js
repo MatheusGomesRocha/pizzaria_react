@@ -20,7 +20,7 @@ export default function Features () {
     const [filter, setFilter] = useState('pasta');
 
     return(
-        <div className={styles.container}>
+        <div id="features" className={styles.container}>
             <section className={styles.header}>
                 <div />
                 <img src={PizzaSlice} />

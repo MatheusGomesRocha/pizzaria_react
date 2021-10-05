@@ -12,7 +12,7 @@ export default function Cart () {
     const [price, setPrice] = useState(0);
     const [cartArray, setCartArray] = useState([]);
 
-    const { setRequest, newRequest, email } = useContext(ModalContext);
+    const { setRequest, newRequest, email, openOrderModal } = useContext(ModalContext);
 
     useEffect(() => {
         api.get(`cart-quantity/${email}`)
@@ -86,7 +86,7 @@ export default function Cart () {
             <div className={styles.cartFooter}>
                 <h2>R$ {price}</h2>
 
-                <div className={styles.button}>
+                <div onClick={openOrderModal} className={styles.button}>
                     <span>Finish order</span>
                 </div>
             </div>

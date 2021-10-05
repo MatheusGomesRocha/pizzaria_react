@@ -4,7 +4,7 @@ import styles from './introduction.module.scss';
 
 export default function Introduction () {
     return(
-        <div className={styles.container}>
+        <div id="home" className={styles.container}>
             <div className={styles.content}>
                 <h2>Authentic Italian Pizzas</h2>
 

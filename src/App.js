@@ -16,9 +16,10 @@ import Footer from './components/Footer';
 
 import { ModalContext } from './contexts/ModalContext';
 import Modal from './components/Modal';
+import OrderModal from './components/OrderModal';
 
 function App() {
-  const { email, isOpen } = useContext(ModalContext);
+  const { email, isOpen, isOpenOrderModal } = useContext(ModalContext);
 
   return (
         <div className="app">
@@ -44,6 +45,8 @@ function App() {
             <Footer />
 
             {isOpen ? <Modal /> : undefined}
+
+            {isOpenOrderModal ? <OrderModal /> : undefined}
           </main>
 
         {email ? <Cart /> : undefined}
