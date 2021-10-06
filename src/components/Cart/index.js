@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 
 import PizzaDemo2 from '../../assets/images/pizza-demo-2.png';
+import Trash from '../../assets/images/trash.png';
 
 import { api } from '../../services/api';
 import { ModalContext } from '../../contexts/ModalContext';
@@ -56,6 +57,16 @@ export default function Cart () {
         setRequest(true);
     }
 
+    function deleteFromCart (id) {
+        setRequest(true);
+
+        api.post('delete-product', {
+            id
+        })
+        .then((res) => console.log(res.data))
+        .catch((err) => console.log(err));
+    }
+
     return(
         <section className={styles.cart}>
             <div className={styles.cartHeader}>
@@ -70,21 +81,28 @@ export default function Cart () {
                     <div className={styles.content}>
                         <div className={styles.contentHeader}>
                             <h2>{item.productName}</h2>
-                            <span>R$ {parseFloat(item.productQuantity * item.productPrice).toFixed(2)}</span>
+                            <div onClick={() => deleteFromCart(item.id)} className={styles.deleteButton}>
+                                <img src={Trash} />
+                            </div>
                         </div>
 
-                        <div className={styles.contentFooter}>
-                            <span onClick={() => decrease(item.productQuantity, item.productName)}>-</span>
-                            <span className={styles.quantity}>{item.productQuantity}</span>
-                            <span onClick={() => increase(item.productName)}>+</span>
+                        <div className={styles.footer}>
+                            <div className={styles.contentFooter}>
+                                <span onClick={() => decrease(item.productQuantity, item.productName)}>-</span>
+                                <span className={styles.quantity}>{item.productQuantity}</span>
+                                <span onClick={() => increase(item.productName)}>+</span>
+                            </div>
+
+                            <span className={styles.price}>R$ {parseFloat(item.productQuantity * item.productPrice).toFixed(2)}</span>
                         </div>
 
+                        
                     </div>
                 </div>
             ))}
 
             <div className={styles.cartFooter}>
-                <h2>R$ {price}</h2>
+                <h2>R$ {price.toFixed(2)}</h2>
 
                 <div onClick={openOrderModal} className={styles.button}>
                     <span>Finish order</span>

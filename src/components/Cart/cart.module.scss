@@ -43,31 +43,61 @@
                 justify-content: space-between;
                 width: 100%;
 
-                span {
-                    color: var(--red);
-                    font-size: 1.5rem;
+                .deleteButton {
+                    border: 1px solid var(--red);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                    transition: 250ms;
+                    width: 2.5rem;
+                    height: 2.5rem;
+                    border-radius: 0.5rem;
+
+                    &:hover {
+                        background-color: var(--red);
+                    }
+
+                    img {
+                        width: 28px;
+                        height: 28px;
+                    }
                 }
             }
 
-            .contentFooter {
+            .footer {
                 display: flex;
                 align-items: center;
-                margin-top: 0.3rem;
+                justify-content: space-between;
+                margin-top: .75rem;
 
-                span {
-                    color: var(--black);
-                    cursor: pointer;
-                    font-size: 1.5rem;
+                .contentFooter {
+                    display: flex;
+                    align-items: center;
+                    margin-top: 0.3rem;
+    
+                    span {
+                        color: var(--black);
+                        cursor: pointer;
+                        font-size: 1.5rem;
+                    }
+    
+                    .quantity {
+                        color: var(--red);
+                        cursor: auto;
+                        text-align: center;
+                        margin: 0 1rem;
+                        width: 2rem;
+                    }
                 }
 
-                .quantity {
+                .price {
                     color: var(--red);
-                    cursor: auto;
-                    text-align: center;
-                    margin: 0 1rem;
-                    width: 2rem;
+                    font-size: 1.3rem;
                 }
             }
+
+            
         }
     }
 
@@ -75,7 +105,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        margin-top: 80%;
+        margin-top: 5rem;
         padding: 0 2rem;
 
         h2 {
