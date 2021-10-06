@@ -6,6 +6,7 @@ import { api } from '../../services/api';
 import PizzaDemo1 from '../../assets/images/pizza-demo-1.png';
 
 import styles from './orderModal.module.scss';
+import axios from 'axios';
 
 export default function OrderModal () {
     const [isFilled, setIsFilled] = useState(true); 
@@ -19,6 +20,14 @@ export default function OrderModal () {
     const [cartArray, setCartArray] = useState([]);
     const [quantity, setQuantity] = useState(0);
     const [price, setPrice] = useState(0);
+
+    const [cep, setCep] = useState();
+    const [city, setCity] = useState('');
+    const [district, setDistrict] = useState('');
+    const [street, setStreet] = useState('');
+    const [number, setNumber] = useState();
+
+    const [disabled, setDisabled] = useState(true);
 
     const { email, closeOrderModal } = useContext(ModalContext);
 
@@ -38,6 +47,22 @@ export default function OrderModal () {
         });
     }, []);
 
+    useEffect(() => {
+        if(!cep || !city || !street || !number) {
+            setDisabled(true);
+        } else {
+            setDisabled(false);
+        }
+    }, [cep, city, district, street, number])
+
+    function getCep() {
+        axios.get(`https://ws.apicep.com/cep/${cep}.json`)
+        .then((res) => {
+            let data = res.data;
+            setCity(data.city);
+        })
+    }
+
 
     function continue1() {
         setProgress(true);
@@ -47,10 +72,14 @@ export default function OrderModal () {
     }
 
     function continue2() {
-        setProgress2(true);
-        setIsFilled(false);
-        setIsFilled2(false);
-        setIsFilled3(true);
+        if(cep && city && district && street && number) {
+            setProgress2(true);
+            setIsFilled(false);
+            setIsFilled2(false);
+            setIsFilled3(true);
+        } else {
+            return;
+        }
     }
 
     function back1() {
@@ -137,30 +166,30 @@ export default function OrderModal () {
 
                             <div className={styles.inputArea}>
                                 <label>CEP</label>
-                                <input placeholder="CEP" />
+                                <input defaultValue={cep} onBlur={getCep} onChange={v => setCep(v.target.value)} placeholder="CEP" />
                             </div>
 
                             <div className={styles.rowInput}>
                                 <div className={styles.inputArea}>
                                     <label>District</label>
-                                    <input placeholder="District" />
+                                    <input defaultValue={district} onChange={v => setDistrict(v.target.value)} placeholder="District" />
                                 </div>
 
                                 <div className={styles.inputArea}>
                                     <label>City</label>
-                                    <input className={styles.disabled} placeholder="Disabled" disabled={true} />
+                                    <input defaultValue={city} className={styles.disabled} placeholder="Disabled" disabled={true} />
                                 </div>
                             </div>
 
                             <div className={styles.rowInput}>
                                 <div className={styles.inputArea}>
                                     <label>Street</label>
-                                    <input placeholder="Street" />
+                                    <input defaultValue={street} onChange={v => setStreet(v.target.value)} placeholder="Street" />
                                 </div>
 
                                 <div className={styles.inputArea}>
                                     <label>Number</label>
-                                    <input placeholder="Number" />
+                                    <input defaultValue={number} onChange={v => setNumber(v.target.value)} placeholder="Number" />
                                 </div>
                             </div>
                         </form>
@@ -185,7 +214,14 @@ export default function OrderModal () {
                         }
                     </div>
 
-                    <div onClick={isFilled ? continue1 : continue2} className={styles.continueButton}>
+                    <div style={{
+                            backgroundColor: isFilled2 ? disabled ? '#ccc' : undefined : undefined, 
+                            cursor: isFilled2 ? disabled ? 'not-allowed' : undefined : undefined
+                        }} 
+                        disabled={isFilled2 ? disabled ? true : false : undefined} 
+                        onClick={isFilled ? continue1 : isFilled2 ? continue2 : isFilled3 ? closeOrderModal : undefined} 
+                        className={styles.continueButton}
+                    >
                         <span>Continue →</span>
                     </div>
                 </div>
