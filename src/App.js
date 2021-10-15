@@ -49,7 +49,7 @@ function App() {
             {isOpenOrderModal ? <OrderModal /> : undefined}
           </main>
 
-        {/* {email ? <Cart /> : undefined} */}
+        <Cart /> 
         
       
       </div>
