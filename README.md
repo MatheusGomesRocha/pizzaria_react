@@ -28,13 +28,13 @@ com conexão à uma APi feito em Node e possibilita o usuário se cadastrar e fa
 
 ## **Getting Started**
 
-## *Abra o Prompt de Comando*
+### Abra o Prompt de Comando
 
     git clone https://github.com/MatheusGomesRocha/pizzaria_react
 
     cd pizzaria_react && npm install`
 
-## *Abra um novo Prompt de Comando*
+### Abra um novo Prompt de Comando
 
     cd path/pizzaria_react && npm start
     
